@@ -6,9 +6,7 @@ plt.style.use(styles[8])
 x = [26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
 y = [42000, 46752, 49320, 53200, 56000, 62316, 64928, 67317, 68748, 73752]
 
-plt.figure(facecolor=('#2f3136')) #set the outside face color
 axes = plt.gca()
-axes.set_facecolor('#2f3136') #set the inside face color
 axes.yaxis.grid() #Set horizontal gridlines only
 
 plt.plot(x, y, color = '#5865f2', linestyle='-', marker = 'o', label = 'All Devs') #plot the data
@@ -25,4 +23,5 @@ for spine in plt.gca().spines.values():
     i += 1
 
 plt.axis(xmin=26, xmax=35, ymin=40000, ymax=80000)
+plt.savefig('test2.png',bbox_inches='tight',transparent=True, pad_inches=0)
 plt.show()
